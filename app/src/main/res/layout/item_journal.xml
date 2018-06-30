@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:layout_marginBottom="20dp"
+    android:elevation="10dp"
+    card_view:cardUseCompatPadding="true"
+    card_view:cardCornerRadius="5dp"
+    >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="270dp">
+
+    <ImageView
+        android:id="@+id/journal_image"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:src="@drawable/image_default"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/none"
+       />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:orientation="vertical"
+        android:background="#B3000000"
+        android:layout_alignParentBottom="true">
+
+    <TextView
+        android:id="@+id/journal_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:layout_weight="0"
+        android:layout_marginTop="2dp"
+        android:layout_marginStart="5dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        tools:text=""
+        android:ellipsize="end"
+        android:maxLines="1"/>
+
+    <TextView
+        android:id="@+id/journal_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:textStyle="bold"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/white"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        tools:text=""/>
+    <TextView
+        android:id="@+id/journal_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/white"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:ellipsize="end"
+        android:maxLines="2"/>
+
+    </LinearLayout>
+</RelativeLayout>
+</android.support.v7.widget.CardView>

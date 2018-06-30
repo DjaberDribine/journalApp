@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00838F</color>
+    <color name="colorPrimaryDark">#00838F</color>
+    <color name="colorAccent">#0097A7</color>
+    <color name="red_new">#d50000</color>
+
+    <color name="colorAccent_c">#26C6DA</color>
+    <!--<color name="colorPrimary">#d50000</color>
+    <color name="colorPrimaryDark">#d50000</color>
+    <color name="colorAccent">#d50000</color>
+    <color name="colorAccent_c">#26C6DA</color>-->
+
+    <color name="Black">#000000</color>
+    <color name="White">#FFFFFF</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="blue">#425A84</color>
+    <color name="blueclaire">#FF4D88D8</color>
+    <color name="selected_blue">#384A6A</color>
+    <color name="white">#ffffff</color>
+    <color name="transparent_white">#66ffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="grey">#121212</color>
+    <color name="green">#42854F</color>
+    <color name="greenSwitch">#4CAF50</color>
+    <color name="red">#C31917</color>
+    <color name="red_error">#FFCDD2</color>
+    <color name="orange">#DE9220</color>
+    <color name="blue_light">#0174DF</color>
+    <color name="blue_f">#FF1E51A1</color>
+    <color name="blue_ff">#0D47A1</color>
+    <color name="grey_light">#6E6E6E</color>
+    <color name="grey_smooth">#D8D8D8</color>
+    <color name="grey_cf">#E0E0E0</color>
+    <color name="grey_c">#EEEEEE</color>
+    <color name="grey_cc">#F5F5F5</color>
+    <color name="summer">#44eebd82</color>
+    <color name="fall">#44d8d27e</color>
+    <color name="winter">#44a1c1da</color>
+    <color name="spring">#448da64b</color>
+
+    <color name="viewBg">#f1f5f8</color>
+    <color name="album_title">#4c4c4c</color>
+
+</resources>
