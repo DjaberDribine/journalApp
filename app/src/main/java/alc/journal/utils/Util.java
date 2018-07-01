@@ -6,6 +6,8 @@ import android.content.CursorLoader;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
@@ -13,6 +15,9 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.text.TextUtils;
 
+import com.googlecode.mp4parser.h264.Debug;
+
+import java.io.IOException;
 import java.util.Calendar;
 
 import alc.journal.R;
@@ -127,6 +132,32 @@ public class Util {
         SharedPreferences.Editor editor =  mPreference.edit();
         editor.putBoolean(key, value).apply();
     }
+
+    public static boolean isInternetAvailable(Context context) {
+        ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+        if (activeNetwork == null) return false;
+
+        switch (activeNetwork.getType()) {
+            case ConnectivityManager.TYPE_WIFI:
+                if ((activeNetwork.getState() == NetworkInfo.State.CONNECTED ||
+                        activeNetwork.getState() == NetworkInfo.State.CONNECTING)
+                       )
+                    return true;
+                break;
+            case ConnectivityManager.TYPE_MOBILE:
+                if ((activeNetwork.getState() == NetworkInfo.State.CONNECTED ||
+                        activeNetwork.getState() == NetworkInfo.State.CONNECTING)
+                       )
+                    return true;
+                break;
+            default:
+                return false;
+        }
+        return false;
+    }
+
+
 
 
 

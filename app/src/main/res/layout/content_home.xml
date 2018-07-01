@@ -16,7 +16,7 @@
         android:divider="@android:color/transparent"
         android:transcriptMode="alwaysScroll"
         tools:listitem="@layout/item_journal"/>
-
+    <include layout="@layout/no_items_layout" />
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleLarge"
@@ -24,5 +24,4 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"/>
-    <include layout="@layout/no_items_layout" />
 </RelativeLayout>

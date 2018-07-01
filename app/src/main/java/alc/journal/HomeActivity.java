@@ -1,5 +1,6 @@
 package alc.journal;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
@@ -7,6 +8,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuInflater;
@@ -62,6 +64,8 @@ public class HomeActivity extends AppCompatActivity {
             Toolbar toolbar = findViewById(R.id.toolbar);
             setSupportActionBar(toolbar);
             this.setTitle("");
+
+
             mUserPhoto = findViewById(R.id.user_photo);
             mUserDisplayName = findViewById(R.id.user_display_name);
 
@@ -234,7 +238,11 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        if(!Util.isInternetAvailable(this))
+            showNoConnectionDialog();
+        else
         mFirebaseAuth.addAuthStateListener(mAuthStateListener);
+
     }
 
     @Override
@@ -297,5 +305,19 @@ public class HomeActivity extends AppCompatActivity {
          Util.showMessageBoxSimple(this,Util.APP_NAME,ex.getMessage());
         }
 
+    }
+
+    private void showNoConnectionDialog(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Connection");
+        builder.setMessage("No connections are available!!\nMake sure WI-FI or cellular-data isturned on, then try again.")
+        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finish();
+            }
+        });
+        AlertDialog alertDialog =  builder.create();
+        alertDialog.show();
     }
 }
