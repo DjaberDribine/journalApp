@@ -1,5 +1,6 @@
 # journalApp
 Google ALC 3.0 challenge (Journal App)
+An android based mobile application that make use of google and mail authentication with firebase auht and allows users to create and update journal entries that will be kept in a FireBase data base. 
 ## Login Page 
 ![screenshot_1530463218](https://user-images.githubusercontent.com/40563761/42136666-0c0a660c-7d60-11e8-9899-a19f07c5a18f.png)
 ## Home Page
