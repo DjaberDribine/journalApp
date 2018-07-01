@@ -162,7 +162,7 @@ public class AddJournalActivity extends AppCompatActivity {
                     bmp = rotateImageIfRequired(bmp,realPath);
 
                     ByteArrayOutputStream baos = new ByteArrayOutputStream();
-                    bmp.compress(Bitmap.CompressFormat.JPEG, 10, baos);
+                    bmp.compress(Bitmap.CompressFormat.JPEG, 40, baos);
                     byte[] fileInBytes = baos.toByteArray();
                     //ref.putFile(filePath)
                    ref.putBytes(fileInBytes)
