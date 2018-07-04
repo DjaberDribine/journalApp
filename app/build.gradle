@@ -3,10 +3,10 @@ apply plugin: 'com.android.application'
 android {
     signingConfigs {
         release {
-            keyAlias 'JournalStore'
-            keyPassword '220182Bouira'
-            storeFile file('/Users/djaber/Desktop/journal/KeyStore')
-            storePassword '220182Bouira'
+            keyAlias ''
+            keyPassword ''
+            storeFile file('')
+            storePassword ''
         }
     }
     compileSdkVersion 27
